@@ -1,0 +1,113 @@
+<!-- INMT 342 Project -->
+<!-- Pancakes Registration Form -->
+<!-- Grant Cates -->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Tri-ing for Pancakes Registration</title> <!-- Create a Title for the webpage -->
+    <script src="PancakesFormValidation.js"></script> <!-- Link the Validation form to the HTML file -->
+</head>
+
+
+
+<body>
+    <h1>Tri-ing for Pancakes!</h1> <!-- Title -->
+    <p>Race Distances:</p> <!-- Sub-Title -->
+    <ul>
+        <li>Sprint Distance – 800-meter swim, 20K bike, 5K run</li> <!-- Sprint Distance Description -->
+        <li>Olympic Distance – 1.5K swim, 40K bike, 10K run</li> <!-- Olympic Distance Description -->
+    </ul>
+
+    <p>Instructions: Use tab keys to move from one input field to the next.</p>
+    <!-- Create an Instrustions promtp for the user -->
+
+    <form action="submit_registration.php" method="post">
+        <label for="raceCategory">Race Category:</label>
+        <!-- Creating the First Drop down box (Race Category) This fucntion creates the header -->
+        <select id="raceCategory" name="raceCategory" required>
+            <option value="Sprint-Individual">Sprint-Individual</option> <!-- Creatt Sprint Individual option -->
+            <option value="Sprint-Relay">Sprint-Relay</option> <!-- Create Sprint Relay option -->
+            <option value="Olympic-Individual">Olympic-Individual</option> <!-- Create Olympic Individual option-->
+            <option value="Olympic-Relay">Olympic-Relay</option> <!-- Create Olympic Relay option -->
+        </select>
+
+        <label for="usatMembershipID">USAT Membership ID (10-digit number):</label>
+        <!-- Creating a header for the MembershipID drop down tab -->
+        <input type="text" id="usatMembershipID" name="usatMembershipID" pattern="[0-9]{10}" required>
+        <!-- Create text box for the user -->
+
+        <label for="password">Password:</label> <!-- Creating a header for the Password drop down -->
+        <input type="password" id="password" name="password" required> <!-- Creating a text box for the user -->
+
+        <label for="name">Name:</label> <!-- Creating a header for the users name -->
+        <input type="text" id="name" name="name" required>
+        <!-- Creating a text box for the user to insert the first name -->
+
+        <label for="address">Address:</label> <!-- Creating a header for the users address -->
+        <input type="text" id="address" name="address" required> <!-- Creating a text box for the user -->
+
+        <label for="zipCode">Zip Code:</label> <!-- Creating a header for the Zip Code -->
+        <input type="text" id="zipCode" name="zipCode" required> <!-- Creating a text box for the Zip Code -->
+
+        <label for="gender">Gender:</label> <!-- Creating a header for the gender -->
+        <input type="radio" id="male" name="gender" value="Male"> Male <!-- radio button = male -->
+        <input type="radio" id="female" name="gender" value="Female"> Female <!-- radio button = female -->
+        <input type="radio" id="other" name="gender" value="Other"> Other <!-- radio button = other -->
+
+        <label for="ethnicity">Ethnicity:</label> <!-- Creating a title for the Ethnicity -->
+        <input type="checkbox" id="white" name="ethnicity[]" value="White"> White <!-- checkbox = white -->
+        <input type="checkbox" id="hispanic" name="ethnicity[]" value="Hispanic/Latino"> Hispanic/Latino
+        <!-- checkbox =  Hispanic/Latino-->
+        <input type="checkbox" id="black" name="ethnicity[]" value="Black or African American"> Black or African
+        American <!-- checkbox =  Black or African American-->
+        <input type="checkbox" id="nativeAmerican" name="ethnicity[]" value="Native American/American Indian"> Native
+        American/American Indian <!-- checkbox =  Native American/American Indian-->
+        <input type="checkbox" id="asianPacific" name="ethnicity[]" value="Asian/Pacific Islander"> Asian/Pacific
+        Islander <!-- checkbox =  Asian/Pacific -->
+        <input type="checkbox" id="otherEthnicity" name="ethnicity[]" value="Other"> Other <!-- checkbox = Other -->
+
+        <label for="dob">Date of Birth:</label> <!-- Creating a header for DOB -->
+        <input type="date" id="dob" name="dob" required>
+        <!-- Use the "date" function which allows the user to filter through the calendar to their birthday -->
+
+        <label for="emergencyContactName">Emergency Contact Name:</label>
+        <!-- Create a header for Emergency Contact Name -->
+        <input type="text" id="emergencyContactName" name="emergencyContactName" required>
+        <!-- Create a text box for the user -->
+
+        <label for="emergencyContactPhone">Emergency Contact Phone Number:</label>
+        <!-- Create a header for Emergency contact phone number -->
+        <input type="tel" id="emergencyContactPhone" name="emergencyContactPhone" pattern="[0-9]{10}" required>
+        <!-- create a text box for the user -->
+
+        <label for="waiverAgreement">Waiver Agreement (Y/N):</label> <!-- Create a header for the Wavier agreemtn -->
+        <input type="radio" id="waiverYes" name="waiverAgreement" value="Y"> Yes <!-- radio button = Yes -->
+        <input type="radio" id="waiverNo" name="waiverAgreement" value="N"> No <!-- radio button = No -->
+
+        <label for="tshirtSize">T-shirt Size:</label> <!-- Create a header for T-shirt sizes -->
+        <select id="tshirtSize" name="tshirtSize" required>
+            <!-- Create a drop down tab for the user to select their size of shirt -->
+            <option value="S">Small</option> <!-- option = small/S -->
+            <option value="M">Medium</option> <!-- option = medium/M -->
+            <option value="L">Large</option> <!-- option = large/L -->
+            <option value="XL">X-Large</option> <!-- option = xlarge/XL -->
+        </select>
+
+        <label for="email">Email Address:</label> <!-- create a header for email address -->
+        <input type="email" id="email" name="email" required>
+        <!-- create a text box for the user to enter thier email address-->
+
+        <label for="aboutMe">About Me:</label> <!-- Create a header for About Me -->
+        <textarea id="aboutMe" name="aboutMe" rows="4" cols="50"></textarea> <!-- create the text box for about me -->
+
+        <input type="submit" value="Register"> <!-- Create the submit button -->
+    </form>
+</body>
+
+<link rel='stylesheet' href='PancakesRegistrationForm.css' type='text/css' />
+
+</html>
